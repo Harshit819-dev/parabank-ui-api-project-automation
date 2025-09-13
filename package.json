@@ -1,0 +1,22 @@
+{
+  "name": "parabank-ui-api-project-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.1"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.55.0",
+    "faker": "^6.6.6",
+    "playwright": "^1.55.0"
+  }
+}
