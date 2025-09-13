@@ -10,7 +10,7 @@
     "ssn": "123-45-6789",
     "password": "test",
     "confirmPassword": "test",
-    "username": "BankAntone35@g"
+    "username": "BankOswaldo54@"
   },
   "billPaymentService": {
     "payeeName": "johndoe",
@@ -19,6 +19,6 @@
     "payeeState": "test"
   },
   "accountDetails": {
-    "checkingAccountNo": "144213"
+    "checkingAccountNo": "18561"
   }
 }
