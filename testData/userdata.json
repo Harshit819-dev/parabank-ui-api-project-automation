@@ -1,0 +1,24 @@
+{
+  "register": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "address": "123 Main St",
+    "city": "Metropolis",
+    "state": "NY",
+    "zipCode": "10001",
+    "phoneNo": "1234567890",
+    "ssn": "123-45-6789",
+    "password": "test",
+    "confirmPassword": "test",
+    "username": "BankAntone35@g"
+  },
+  "billPaymentService": {
+    "payeeName": "johndoe",
+    "payeeAddress": "test",
+    "payeeCity": "test",
+    "payeeState": "test"
+  },
+  "accountDetails": {
+    "checkingAccountNo": "144213"
+  }
+}
