@@ -236,10 +236,7 @@ test.describe.serial('ParaBank E2E User Journey', () => {
         await openAccountPage.accountType.click()
         await openAccountPage.accountType.selectOption('1'); // Assuming '1' is the value for Savings
         console.log("savings account selected");
-        for(let i=0;i<2;i++){
-            await page.keyboard.press('Tab');
-        }
-        await page.keyboard.press('Enter');
+        await page.locator('input.button[value="Open New Account"]').click();
         await page.waitForTimeout(2000);
     })
 
