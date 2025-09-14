@@ -33,8 +33,7 @@ test.describe.serial('ParaBank E2E User Journey', () => {
         const executablePath = undefined;
 
         context = await chromium.launchPersistentContext(userDataDir, {
-            headless: false,
-            slowMo: 200,
+            headless: true,
             executablePath,
             args: [
                 '--start-maximized',
