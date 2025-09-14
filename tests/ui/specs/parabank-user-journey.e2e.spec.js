@@ -7,11 +7,12 @@ import UserRegisterActions from "../pageActions/register.actions";
 import {faker} from '@faker-js/faker';
 import LoginActions from "../pageActions/login.actions";
 import BillPaymentServiceActions from "../pageActions/billPayment.service.actions";
-import { userData } from '../../../utils/globalData.js';
+import { userData} from '../../../utils/globalData.js';
 import {RegisterPage} from "../pages/registerUser.page";
 import {AccountOverviewPage} from "../pages/account.overview.page";
 import {OpenAccountPage} from "../pages/openAccount.page";
 import {FundPage} from "../pages/fund.page";
+import helper from "../../../utils/helper";
 
 
 
@@ -34,6 +35,7 @@ test.describe.serial('ParaBank E2E User Journey', () => {
 
         context = await chromium.launchPersistentContext(userDataDir, {
             headless: true,
+            slowMo:300,
             executablePath,
             args: [
                 '--start-maximized',
@@ -175,7 +177,10 @@ test.describe.serial('ParaBank E2E User Journey', () => {
         //Save AccountNo and username in userData.json file
         userData.accountDetails.checkingAccountNo = checkingAccNo;
         userData.register.username = uniqueUsername;
-        fs.writeFileSync('./testdata/userData.json', JSON.stringify(userData, null, 2));
+
+        const dir = path.resolve(__dirname, './testdata/userData.json');
+        console.log("dir", dir)
+        helper.putTestData(userData);
         console.log("data written to file:", checkingAccNo);
 
         //store checking account balance
@@ -231,7 +236,10 @@ test.describe.serial('ParaBank E2E User Journey', () => {
         await openAccountPage.accountType.click()
         await openAccountPage.accountType.selectOption('1'); // Assuming '1' is the value for Savings
         console.log("savings account selected");
-        await openAccountPage.openNewAccountButton.click();
+        for(let i=0;i<2;i++){
+            await page.keyboard.press('Tab');
+        }
+        await page.keyboard.press('Enter');
         await page.waitForTimeout(2000);
     })
 

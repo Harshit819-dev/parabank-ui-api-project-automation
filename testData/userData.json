@@ -10,7 +10,7 @@
     "ssn": "123-45-6789",
     "password": "test",
     "confirmPassword": "test",
-    "username": "BankCristina_C"
+    "username": "BankDiamond65@"
   },
   "billPaymentService": {
     "payeeName": "johndoe",
@@ -19,6 +19,6 @@
     "payeeState": "test"
   },
   "accountDetails": {
-    "checkingAccountNo": "16896"
+    "checkingAccountNo": "17673"
   }
 }
